@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LandingPage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/javascript.js') }}"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1>Dojos-Page</h1>
+    </header>
+    <main>
+      <form class="dojo-form" action="/new-users" method="post">
+        <label>First Name<input id="first-name"  type="text" name="first-name" value=""></label>
+        <label>Last Name<input id="last-name" type="text" name="last-name" value=""></label>
+        <label>Phone<input id="phone" type="tel" name="phone" value=""></label>
+        <label>Email<input id="email" type="email" name="email" value=""></label>
+        <input type="submit" name="submit" value="Submit Form">
+        <p>We respect your personal information by never selling it for less than it is worth.</p>
+      </form>
+    </main>
+  </body>
+</html>

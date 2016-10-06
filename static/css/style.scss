@@ -1,0 +1,64 @@
+$background-color: rgb(209, 226, 220);
+$light-border: rgb(149, 182, 170);
+$med-border: rgb(93, 129, 116);
+$dark-border: rgb(40, 54, 49);
+$light-text: rgb(76, 115, 113);
+$reg-text: rgb(28, 57, 56);
+$accent-text: rgb(5, 155, 164);
+
+@function pxrem($px){
+    @return($px/16)+rem;
+};
+
+body{
+  color: $reg-text;
+  font-family: sans-serif;
+  background-color: $background-color;
+  width: 100%;
+}
+header{
+  height: pxrem(60);
+  margin-top: pxrem(20);
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid $med-border;
+  h1{
+    color: $accent-text;
+  }
+}
+main{
+  width: 90%;
+  min-width: pxrem(200);
+  min-height: pxrem(200);
+  margin: 0 auto;
+  margin-top: pxrem(20);
+  padding: pxrem(20);
+  background-color: white;
+  border: 1px solid $med-border;
+  .img-wrapper{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: pxrem(10);
+    width: 40%;
+    min-width: pxrem(200);
+    img{
+      width: 100%;
+    }
+    em{
+      color: $light-text;
+    }
+  }
+
+  form{
+    width: 40%;
+    min-width: pxrem(200);
+    label{
+      display: block;
+      margin-bottom: pxrem(10);
+      input{
+        float: right;
+        margin-right: pxrem(20);
+      }
+    }
+  }
+}
